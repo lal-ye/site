@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<!-- index.html 
+I want to create a site that feels like a personal website from the early days of the web blended with some modern features of html5 and css3. i want the site to be a monorepo all in one file. and some basic javascript to make the site interactive. -->
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hello World</title>
+  <style>
+    /* Basic reset */
+    *,
+    *::before,
+    *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      /* Theme variables */
+      --bg-dark: linear-gradient(to bottom, #1a1a1a, #333333);
+      --text-light: #f0f0f0;
+      --neon-teal: #64ffda;
+      --neon-pink: #ff4081;
+      --container-bg: #f0f0f0;
+      /* Softer container background */
+      --text-dark: #444;
+      --link-color: #0077cc;
+      --button-bg: linear-gradient(to bottom, #5bc0de, #339bb9);
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+      /* Modern font stack */
+      background: var(--bg-dark);
+      color: var(--text-light);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+      cursor: url('https://cur.cursors-4u.net/others/images10/oth935.gif'), auto;
+    }
+
+    h1 {
+      color: var(--neon-teal);
+      text-shadow: 1px 1px 2px #00bfa5;
+    }
+
+    a {
+      color: var(--neon-pink);
+      text-decoration: none;
+      border-bottom: 1px solid var(--neon-pink);
+      transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    }
+
+    .container:hover {
+      transform: scale(1.02);
+      box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.15);
+    }
+
+    a:hover {
+      background-color: var(--neon-pink);
+      color: var(--text-light);
+      border-bottom: none;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    }
+
+    .container {
+      background: var(--container-bg);
+      border: 1px solid #ddd;
+      /* Lighter border */
+      border-radius: 8px;
+      /* Slightly less rounded corners */
+      box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+      /* Softer shadow */
+      padding: 20px;
+      margin-bottom: 20px;
+      width: 80%;
+      max-width: 600px;
+      text-align: center;
+      transition: all 0.3s ease;
+    }
+
+    .container h1 {
+      font-size: 2.2em;
+      /* Slightly larger headings */
+      font-weight: bold;
+      /* Bold headings */
+      color: var(--text-dark);
+      text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
+      margin-bottom: 10px;
+    }
+
+    .container p {
+      font-size: 1.1em;
+      color: #555;
+      line-height: 1.6;
+    }
+
+    .container strong {
+      color: #333;
+      font-weight: bold;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 10px 20px;
+      background: var(--button-bg);
+      color: white;
+      border: 1px solid #2e6da4;
+      border-radius: 5px;
+      box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .button:hover {
+      background: linear-gradient(to bottom, #339bb9, #2e6da4);
+      box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Navigation Bar Styles */
+    .navigation {
+      background: var(--container-bg);
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+      margin-bottom: 20px;
+      width: 80%;
+      max-width: 600px;
+    }
+
+    .navigation ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: space-around;
+      /* Changed to space-around */
+      align-items: center;
+    }
+
+    .navigation li {
+      margin: 0;
+    }
+
+    .navigation a {
+      display: block;
+      padding: 10px 15px;
+      color: var(--text-dark);
+      text-decoration: none;
+      border-bottom: none;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .navigation a:hover {
+      background-color: var(--neon-pink);
+      color: var(--text-light);
+      border-radius: 5px;
+      text-shadow: none;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav class="navigation">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Projects</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <!-- Main container with a greeting -->
+    <article class="container">
+      <h1>አንደምን ቆያችሁ</h1>
+      <p>My name is <strong>Abenezer Kassahun</strong> and I am a <strong>
+          <br>
+          wannabe ፠ አበልፃጊ ፠ </strong>.</p>
+    </article>
+
+    <!-- Container with a link to LinkedIn -->
+    <article class="container">
+      <h1>
+        <a href="https://github.com/lal-ye/-Abenezer-Kassahun.github.io" target="_blank">Github</a>
+      </h1>
+    </article>
+
+    <!-- Container with a fun message -->
+    <article class="container">
+      <h1>Lets see how many things we can add to it !!!</h1>
+      <p> Lets try and make it as wacky as much as possible
+      </p>
+    </article>
+  </main>
+
+</body>
+
+</html>
