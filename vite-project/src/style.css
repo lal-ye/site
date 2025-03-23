@@ -1,0 +1,162 @@
+  
+    /* Basic reset */
+    *,
+    *::before,
+    *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      /* Theme variables */
+      --bg-dark: #F8F9FA; /* Neutral base background */
+      --text-light: #212529; /* Dark text for contrast */
+      --accent-color: #7950F2; /* Bold accent color */
+      --container-bg: #F0EAD6; /* Eggshell container background */
+      --text-dark: #343A40; /* Slightly lighter dark text */
+      --link-color: var(--accent-color);
+      --button-bg: var(--accent-color);
+
+      /* Spacing variables */
+      --space-lg: 20px;
+      --space-md: 15px;
+      --space-sm: 10px;
+
+      /* Border radius variables */
+      --border-radius-md: 8px;
+      --border-radius-sm: 5px;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+      /* Modern font stack */
+      background: var(--bg-dark);
+      color: var(--text-dark); /* Use --text-dark for better contrast on light bg */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+      padding: var(--space-lg);
+      cursor: url('https://cur.cursors-4u.net/others/images10/oth935.gif'), auto;
+    }
+
+    h1 {
+      color: var(--accent-color); /* Accent color for headings */
+      text-shadow: none; /* Remove text shadow for minimalist look */
+    }
+
+    a {
+      color: var(--link-color); /* Accent color for links */
+      text-decoration: none;
+      border-bottom: 1px solid var(--accent-color); /* Accent color for link underline */
+      transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    }
+
+    .container:hover {
+      transform: scale(1.02);
+      box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.08); /* Softer shadow on hover */
+    }
+
+    a:hover {
+      background-color: var(--accent-color);
+      color: var(--bg-dark); /* Invert colors on hover */
+      border-bottom: none;
+      text-shadow: none; /* Remove text shadow on hover */
+    }
+
+    .container {
+      background: var(--container-bg);
+      border: 1px solid #ddd;
+      /* Lighter border */
+      border-radius: var(--border-radius-md);
+      /* Slightly less rounded corners */
+      box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+      /* Softer shadow */
+      padding: var(--space-lg);
+      margin-bottom: var(--space-lg);
+      width: 80%;
+      max-width: 600px;
+      text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+    .container h1 {
+      font-size: 2.2em;
+      /* Slightly larger headings */
+      font-weight: bold;
+      /* Bold headings */
+      color: var(--text-dark); /* Use --text-dark for container headings */
+      text-shadow: none; /* Remove text shadow for minimalist look */
+      margin-bottom: 10px;
+    }
+
+    .container p {
+      font-size: 1.1em;
+      color: #555;
+      line-height: 1.6;
+    }
+
+    .container strong {
+      color: #333;
+      font-weight: bold;
+    }
+
+    .button {
+      display: inline-block;
+      padding: var(--space-sm) var(--space-lg);
+      background: var(--button-bg); /* Use accent color for buttons */
+      color: var(--bg-dark); /* Dark text on button */
+      border: 1px solid var(--accent-color); /* Accent color border */
+      border-radius: var(--border-radius-sm);
+      box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.1); /* Softer shadow */
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .button:hover {
+      background:  shade(var(--accent-color), 10%); /* Slightly darker on hover - consider using a function like shade if available in CSS preprocessor, or adjust manually */
+      box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Even softer shadow on hover */
+    }
+
+    /* Navigation Bar Styles */
+    .navigation {
+      background: var(--container-bg);
+      padding: var(--space-md);
+      border-radius: var(--border-radius-md);
+      box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+      margin-bottom: var(--space-lg);
+      width: 80%;
+      max-width: 600px;
+    }
+
+    .navigation ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: space-around;
+      /* Changed to space-around */
+      align-items: center;
+    }
+
+    .navigation li {
+      margin: 0;
+    }
+
+    .navigation a {
+      display: block;
+      padding: var(--space-sm) var(--space-md);
+      color: var(--text-dark);
+      text-decoration: none;
+      border-bottom: none;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .navigation a:hover {
+      background-color: var(--accent-color); /* Accent color for nav hover */
+      color: var(--bg-dark); /* Invert colors on nav hover */
+      border-radius: 5px;
+      text-shadow: none;
+    }
+

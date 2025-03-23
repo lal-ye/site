@@ -1,0 +1,63 @@
+# Porting to Vite
+
+## Initial Setup
+- [ ] **TODO(1):** Ensure Node.js and npm are installed ([download here](https://nodejs.org/en/download/)).
+- [ ] **TODO(2):** Create a new directory for your project.
+- [ ] **TODO(3):** Run `npm init vite@latest` in the new directory.
+- [ ] **TODO(4):** Select the "vanilla" template.
+
+## File Organization
+- [ ] **TODO(5):** Replace Vite's `index.html` content with your current HTML (remove inline `<style>`).
+- [ ] **TODO(6):** Extract CSS from your original HTML.
+- [ ] **TODO(7):** Create `src/style.css` in the Vite project.
+- [ ] **TODO(8):** Paste extracted CSS into `src/style.css`.
+- [ ] **TODO(9):** Link `style.css` in Vite's `index.html`: `<link rel="stylesheet" href="/src/style.css">`.
+
+## Verification and JavaScript
+- [ ] **TODO(10):** Verify custom cursor URL ([link](https://cur.cursors-4u.net/others/images10/oth935.gif)) is accessible, or remove the line from your HTML.
+- [ ] **TODO(11):** If adding JavaScript, create `src/main.js`.
+- [ ] **TODO(12):** Include `src/main.js` in `index.html`: `<script type="module" src="/src/main.js"></script>`.
+
+## Development and Build
+- [ ] **TODO(13):** Run `npm run dev` to start the development server.
+- [ ] **TODO(14):** Access the server at `http://localhost:3000` (or the specified port).
+- [ ] **TODO(15):** Run `npm run build` for a production build.
+- [ ] **TODO(16):** Find the build output in the `dist` directory.
+
+## Dependencies
+- [ ] **TODO(17):** Install additional dependencies (e.g., `tailwindcss`) using `npm install [dependency-name]`.
+- [ ] **TODO(18):** Configure Vite plugins for dependencies, if needed.
+
+## Recommendations for Improvement
+
+### Design and Content
+- [ ] **TODO(19):** Review the color scheme; consider [Coolors](https://coolors.co/).
+- [ ] **TODO(20):** Ensure consistent and readable font sizes/styles across devices.
+- [ ] **TODO(21):** Consider lowercase/mixed case in the call to action.
+- [ ] **TODO(22):** Enhance visual effects with animations (`CSS @keyframes`, GSAP).
+- [ ] **TODO(23):** Separate Amharic and English content or use a language toggle.
+- [ ] **TODO(24):** Develop "About" section (bio, skills, contact info).
+- [ ] **TODO(25):** Consider a photo/avatar in "About".
+- [ ] **TODO(26):** Develop "Projects" section (descriptions, images, links).
+- [ ] **TODO(27):** Use a responsive grid layout for projects.
+
+### Interactivity
+- [ ] **TODO(28):** Implement smooth scrolling (see example JavaScript code).
+- [ ] **TODO(29):** Add dark/light mode toggle (use CSS variables; see tutorials).
+- [ ] **TODO(30):** Enhance cursor effects with JavaScript.
+- [ ] **TODO(31):** Add animations (fade-in, bounce, etc.) with CSS/Anime.js.
+- [ ] **TODO(32):** Consider mini-games or interactive elements (e.g., Confetti.js).
+
+### Accessibility, Performance, and SEO
+- [ ] **TODO(33):** Check color contrast ([WebAIM](https://webaim.org/resources/contrastchecker/), WCAG 2.1 AA).
+- [ ] **TODO(34):** Test keyboard navigation; ensure focusable elements (`tabindex="0"` if needed).
+- [ ] **TODO(35):** Add descriptive `alt` text to images.
+- [ ] **TODO(36):** Use semantic HTML (`<header>`, `<nav>`, `<main>`, `<article>`, etc.).
+- [ ] **TODO(37):** Use media queries for responsiveness (e.g., `@media (max-width: 600px)`).
+- [ ] **TODO(38):** Optimize images (ImageOptim, TinyPNG).
+- [ ] **TODO(39):** Add SEO meta tags to `index.html` (e.g., `<meta name="description" content="...">`). Research meta tags for more options.
+
+## Deployment
+- [ ] **TODO(40):** Use Git for version control.
+- [ ] **TODO(41):** Host on GitHub Pages.
+
