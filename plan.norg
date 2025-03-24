@@ -1,63 +1,71 @@
-# Porting to Vite
+```norg
+* Porting to Vite  
+  ;; Tip: Press <C-Space> to toggle task states.
 
-## Initial Setup
-- [ ] **TODO(1):** Ensure Node.js and npm are installed ([download here](https://nodejs.org/en/download/)).
-- [ ] **TODO(2):** Create a new directory for your project.
-- [ ] **TODO(3):** Run `npm init vite@latest` in the new directory.
-- [ ] **TODO(4):** Select the "vanilla" template.
+** Initial Setup
+- (x) [0] Ensure Node.js and npm are installed ([download here](https://nodejs.org/en/download/)).
+- (x) [2] Create a new directory for your project.
+- (x) [3] Run `npm init vite@latest` in the new directory.
+- (x) [4] Select the "vanilla" template.
 
-## File Organization
-- [ ] **TODO(5):** Replace Vite's `index.html` content with your current HTML (remove inline `<style>`).
-- [ ] **TODO(6):** Extract CSS from your original HTML.
-- [ ] **TODO(7):** Create `src/style.css` in the Vite project.
-- [ ] **TODO(8):** Paste extracted CSS into `src/style.css`.
-- [ ] **TODO(9):** Link `style.css` in Vite's `index.html`: `<link rel="stylesheet" href="/src/style.css">`.
+** File Organization
+- (x) [5] Replace Vite's `index.html` content with your HTML (remove any inline `<style>` tags).
+- (x) [6] Extract CSS from your original HTML.
+- (x) [7] Create `src/style.css` in the Vite project.
+- (x) [8] Paste the extracted CSS into `src/style.css`.
+- (x) [9] Link `style.css` in `index.html` using:  
+  ```html
+  <link rel="stylesheet" href="/src/style.css">
+  ```
 
-## Verification and JavaScript
-- [ ] **TODO(10):** Verify custom cursor URL ([link](https://cur.cursors-4u.net/others/images10/oth935.gif)) is accessible, or remove the line from your HTML.
-- [ ] **TODO(11):** If adding JavaScript, create `src/main.js`.
-- [ ] **TODO(12):** Include `src/main.js` in `index.html`: `<script type="module" src="/src/main.js"></script>`.
+** Verification & JavaScript Setup
+- (x) [10] Verify that the custom cursor URL ([link](https://cur.cursors-4u.net/others/images10/oth935.gif)) is accessible or remove it.
+- (x) [11] If using JavaScript, create `src/main.js`.
+- (x) [12] Include `src/main.js` in `index.html` using:  
+  ```html
+  <script type="module" src="/src/main.js"></script>
+  ```
 
-## Development and Build
-- [ ] **TODO(13):** Run `npm run dev` to start the development server.
-- [ ] **TODO(14):** Access the server at `http://localhost:3000` (or the specified port).
-- [ ] **TODO(15):** Run `npm run build` for a production build.
-- [ ] **TODO(16):** Find the build output in the `dist` directory.
+** Development and Build
+- (x) [13] Run `npm run dev` to start the development server.
+- (x) [14] Open the server at `http://localhost:3000` (or your specified port).
+- ( ) [15] Run `npm run build` for a production build.
+- ( ) [16] Confirm the build output appears in the `dist` directory.
 
-## Dependencies
-- [ ] **TODO(17):** Install additional dependencies (e.g., `tailwindcss`) using `npm install [dependency-name]`.
-- [ ] **TODO(18):** Configure Vite plugins for dependencies, if needed.
+** Dependencies & Plugins
+- ( ) [17] Install any additional dependencies (e.g., `tailwindcss`) with `npm install <dependency-name>`.
+- ( ) [18] Configure Vite plugins for these additional dependencies.
 
-## Recommendations for Improvement
+** Recommendations for Improvement
 
-### Design and Content
-- [ ] **TODO(19):** Review the color scheme; consider [Coolors](https://coolors.co/).
-- [ ] **TODO(20):** Ensure consistent and readable font sizes/styles across devices.
-- [ ] **TODO(21):** Consider lowercase/mixed case in the call to action.
-- [ ] **TODO(22):** Enhance visual effects with animations (`CSS @keyframes`, GSAP).
-- [ ] **TODO(23):** Separate Amharic and English content or use a language toggle.
-- [ ] **TODO(24):** Develop "About" section (bio, skills, contact info).
-- [ ] **TODO(25):** Consider a photo/avatar in "About".
-- [ ] **TODO(26):** Develop "Projects" section (descriptions, images, links).
-- [ ] **TODO(27):** Use a responsive grid layout for projects.
+*** Design and Content
+- ( ) [19] Review and update the color scheme (consider [Coolors](https://coolors.co/)).
+- ( ) [20] Ensure consistent, responsive font sizes and styles.
+- ( ) [21] Evaluate your call-to-action text style (e.g. using lowercase or mixed case).
+- ( ) [22] Enhance visual effects with animations (CSS @keyframes, GSAP, etc.).
+- ( ) [23] Separate multilingual content or add a language toggle.
+- ( ) [24] Develop an "About" section (include bio, skills, contact info).
+- ( ) [25] Consider adding a photo/avatar in the "About" section.
+- ( ) [26] Create a "Projects" section with descriptions, images, and links.
+- ( ) [27] Use a responsive grid layout to display projects.
 
-### Interactivity
-- [ ] **TODO(28):** Implement smooth scrolling (see example JavaScript code).
-- [ ] **TODO(29):** Add dark/light mode toggle (use CSS variables; see tutorials).
-- [ ] **TODO(30):** Enhance cursor effects with JavaScript.
-- [ ] **TODO(31):** Add animations (fade-in, bounce, etc.) with CSS/Anime.js.
-- [ ] **TODO(32):** Consider mini-games or interactive elements (e.g., Confetti.js).
+*** Interactivity
+- ( ) [28] Implement smooth scrolling (reference sample JavaScript code).
+- ( ) [29] Add a dark/light mode toggle using CSS variables.
+- ( ) [30] Enhance cursor effects with JavaScript.
+- ( ) [31] Add further animations (e.g., fade-in, bounce) using CSS or Anime.js.
+- ( ) [32] Consider integrating interactive elements or mini-games (e.g., Confetti.js).
 
-### Accessibility, Performance, and SEO
-- [ ] **TODO(33):** Check color contrast ([WebAIM](https://webaim.org/resources/contrastchecker/), WCAG 2.1 AA).
-- [ ] **TODO(34):** Test keyboard navigation; ensure focusable elements (`tabindex="0"` if needed).
-- [ ] **TODO(35):** Add descriptive `alt` text to images.
-- [ ] **TODO(36):** Use semantic HTML (`<header>`, `<nav>`, `<main>`, `<article>`, etc.).
-- [ ] **TODO(37):** Use media queries for responsiveness (e.g., `@media (max-width: 600px)`).
-- [ ] **TODO(38):** Optimize images (ImageOptim, TinyPNG).
-- [ ] **TODO(39):** Add SEO meta tags to `index.html` (e.g., `<meta name="description" content="...">`). Research meta tags for more options.
+*** Accessibility, Performance, and SEO
+- ( ) [33] Check color contrast with [WebAIM’s Contrast Checker](https://webaim.org/resources/contrastchecker/) (aim for WCAG 2.1 AA).
+- ( ) [34] Test keyboard navigation and ensure focusable interactive elements (e.g. add `tabindex="0"`).
+- ( ) [35] Add descriptive alt text to all images.
+- ( ) [36] Use semantic HTML elements (e.g., `<header>`, `<nav>`, `<main>`, `<article>`).
+- ( ) [37] Apply media queries for responsiveness (e.g., `@media (max-width: 600px)`).
+- ( ) [38] Optimize images (consider tools like ImageOptim or TinyPNG).
+- ( ) [39] Add SEO meta tags to `index.html` (e.g., `<meta name="description" content="...">`) and review additional SEO enhancements.
 
-## Deployment
-- [ ] **TODO(40):** Use Git for version control.
-- [ ] **TODO(41):** Host on GitHub Pages.
-
+** Deployment
+- ( ) [40] Initialize a Git repository and commit changes regularly.
+- ( ) [41] Deploy your site on GitHub Pages or another hosting service.
+```

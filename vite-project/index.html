@@ -1,6 +1,4 @@
 <!DOCTYPE html>
-<!-- index.html 
-I want to create a site that feels like a personal website from the early days of the web blended with some modern features of html5 and css3. i want the site to be a monorepo all in one file. and some basic javascript to make the site interactive. -->
 <html lang="en">
 
 <head>
@@ -10,40 +8,50 @@ I want to create a site that feels like a personal website from the early days o
   <link rel="stylesheet" href="/src/style.css">
 </head>
 
-<body>
+<body class="bg-tokyonight text-gray-100 flex flex-col items-center min-h-screen p-5">
   <header>
-    <nav class="navigation">
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Projects</a></li>
+    <nav class="bg-gray-800 bg-opacity-50 rounded-md shadow p-3 mb-5 w-full max-w-2xl">
+      <ul class="flex justify-between">
+        <li><a href="#" class="text-teal-300 hover:text-teal-400">Home</a></li>
+        <li><a href="#" class="text-teal-300 hover:text-teal-400">About</a></li>
+        <li><a href="#" class="text-teal-300 hover:text-teal-400">Projects</a></li>
+        <li>
+          <a href="https://github.com/lal-ye/-Abenezer-Kassahun.github.io" target="_blank"
+            class="text-teal-300 hover:text-teal-400">
+            <img src="https://img.icons8.com/metro/26/FFFFFF/github.png" alt="GitHub" class="h-6 w-6" />
+          </a>
+        </li>
       </ul>
     </nav>
   </header>
-  <main>
-    <!-- Main container with a greeting -->
-    <article class="container">
-      <h1>አንደምን ቆያችሁ</h1>
-      <p>My name is <strong>Abenezer Kassahun</strong> and I am a <strong>
-          <br>
-          wannabe ፠ አበልፃጊ ፠ </strong>.</p>
+  <main class="w-full flex flex-col items-center gap-5">
+    <!-- Main Container with greeting -->
+    <article
+      class="bg-gray-800 bg-opacity-75 border border-gray-700 rounded-md shadow-lg p-6 w-full max-w-2xl text-center transition-transform duration-300 hover:scale-105">
+      <div class="container">
+        <h1 class="text-3xl font-bold text-teal-300 mb-3">አንደምን ቆያችሁ</h1>
+      </div>
+      <div class="container">
+        <p class="text-base text-gray-300 leading-relaxed">
+          My name is <strong class="font-bold">Abenezer Kassahun</strong> and I am a <strong class="font-bold">wannabe ፠
+            አበልፃጊ ፠</strong>.
+        </p>
+      </div>
     </article>
 
-    <!-- Container with a link to LinkedIn -->
-    <article class="container">
-      <h1>
-        <a href="https://github.com/lal-ye/-Abenezer-Kassahun.github.io" target="_blank">Github</a>
-      </h1>
-    </article>
 
     <!-- Container with a fun message -->
-    <article class="container">
-      <h1>Lets see how many things we can add to it !!!</h1>
-      <p> Lets try and make it as wacky as much as possible
-      </p>
+    <article
+      class="bg-gray-800 bg-opacity-75 border border-gray-700 rounded-md shadow-lg p-6 w-full max-w-2xl text-center transition-transform duration-300 hover:scale-105">
+      <div class="container">
+        <h1 class="text-3xl font-bold text-teal-300 mb-3">Let's see how many things we can add to it !!!</h1>
+        <div class="container">
+          <p class="text-base text-gray-300 leading-relaxed">
+            Let's try and make it as wacky as much as possible.
+          </p>
     </article>
-  </main>
 
+  </main>
   <script type="module" src="/src/main.js"></script>
 </body>
 

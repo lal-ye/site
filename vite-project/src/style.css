@@ -1,4 +1,6 @@
-  
+@tailwind base;
+@tailwind components;
+@tailwind utilities; 
     /* Basic reset */
     *,
     *::before,
@@ -10,7 +12,7 @@
 
     :root {
       /* Theme variables */
-      --bg-dark: #F8F9FA; /* Neutral base background */
+      --bg-dark: #4A5568; /* Neutral base background */
       --text-light: #212529; /* Dark text for contrast */
       --accent-color: #7950F2; /* Bold accent color */
       --container-bg: #F0EAD6; /* Eggshell container background */
@@ -28,11 +30,11 @@
       --border-radius-sm: 5px;
     }
 
-    body {
+body {
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
       /* Modern font stack */
-      background: var(--bg-dark);
       color: var(--text-dark); /* Use --text-dark for better contrast on light bg */
+      background-color: var(--bg-dark); /* Set background color using --bg-dark */
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -121,42 +123,51 @@
 
     /* Navigation Bar Styles */
     .navigation {
-      background: var(--container-bg);
-      padding: var(--space-md);
-      border-radius: var(--border-radius-md);
-      box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
-      margin-bottom: var(--space-lg);
-      width: 80%;
-      max-width: 600px;
-    }
+  background: rgba(255, 255, 255, 0.1); /* Semi-transparent white for contrast */
+  padding: var(--space-md);
+  border-radius: var(--border-radius-md);
+  /* Slightly softer shadow for dark backgrounds */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  margin-bottom: var(--space-lg);
+  width: 80%;
+  max-width: 600px;
+}
 
-    .navigation ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      display: flex;
-      justify-content: space-around;
-      /* Changed to space-around */
-      align-items: center;
-    }
+.navigation ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
 
-    .navigation li {
-      margin: 0;
-    }
+.navigation li {
+  margin: 0;
+}
 
-    .navigation a {
-      display: block;
-      padding: var(--space-sm) var(--space-md);
-      color: var(--text-dark);
-      text-decoration: none;
-      border-bottom: none;
-      transition: background-color 0.3s ease, color 0.3s ease;
-    }
+.navigation a {
+  display: block;
+  padding: var(--space-sm) var(--space-md);
+  color: var(--text-light); /* Use the light text color */
+  text-decoration: none;
+  border-bottom: 2px solid transparent; /* Subtle indicator */
+  transition: border-bottom 0.3s ease, color 0.3s ease;
+}
 
-    .navigation a:hover {
-      background-color: var(--accent-color); /* Accent color for nav hover */
-      color: var(--bg-dark); /* Invert colors on nav hover */
-      border-radius: 5px;
-      text-shadow: none;
-    }
+.navigation a:hover {
+  color: var(--accent-color); /* Highlight on hover */
+  border-bottom: 2px solid var(--accent-color);
+  background-color: transparent; /* Remove background hover effect */
+  border-radius: 0;
+  text-shadow: none;
+}
+
+.navigation a img {
+  display: inline-block;
+  vertical-align: middle;
+  height: 24px; /* Adjust size as needed */
+  width: 24px;
+  margin-left: var(--space-sm);
+}
 
