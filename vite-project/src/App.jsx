@@ -1,23 +1,25 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
-import Layout from "./components/layout/Layout"
+import React from "react"
+import { BrowserRouter, Routes, Route } from "react-router-dom"
+import { ThemeProvider } from "./components/layout/ThemeProvider"
+import  Layout  from "./components/layout/Layout" // No need for curly braces
 import Home from "./pages/Home"
 import Projects from "./pages/Projects"
 import About from "./pages/About"
 
 function App() {
   return (
-    <Router>
-      <Layout>
+    <ThemeProvider defaultTheme="system" storageKey="vite-ui-theme">
+      <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/projects" element={<Projects />} />
-          <Route path="/about" element={<About />} />
+          <Route element={<Layout />}>
+            <Route path="/" element={<Home />} />
+            <Route path="/projects" element={<Projects />} />
+            <Route path="/about" element={<About />} />
+          </Route>
         </Routes>
-      </Layout>
-    </Router>
+      </BrowserRouter>
+    </ThemeProvider>
   )
 }
 
 export default App
-
-
