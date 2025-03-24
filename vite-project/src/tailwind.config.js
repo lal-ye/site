@@ -1,15 +1,11 @@
-module.exports = {
+/** @type {import('tailwindcss').Config} */
+export default {
   content: [
-    "./**/*.html",
-    "./**/*.js",
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {
-      colors: {
-        // Define a custom dark background inspired by Tokyonight
-        tokyonight: '#1a1b26',
-      },
-    },
+    extend: {},
   },
   plugins: [],
 }
