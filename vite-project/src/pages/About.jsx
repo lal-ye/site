@@ -1,7 +1,9 @@
+// UI component imports
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+
+// Icon imports
 import {
-  GithubIcon,
   MailIcon,
   BookOpenIcon,
   CodeIcon,
@@ -12,7 +14,7 @@ import {
 } from "lucide-react"
 
 export default function About() {
-  // Skills data with icons
+  // Skills data with icons and proficiency levels
   const skills = [
     { name: "JavaScript", icon: <CodeIcon className="h-5 w-5" />, level: 90 },
     { name: "React", icon: <CodeIcon className="h-5 w-5" />, level: 85 },
@@ -26,11 +28,13 @@ export default function About() {
 
   return (
     <div className="space-y-12 pb-16">
-      <div className="space-y-4">
+      {/* About Me Header Section */}
+      <section className="space-y-4">
         <h1 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">About Me</h1>
-        <p className="text-muted-foreground max-w-[800px]">Learn more about who I am, my background, and what I do.</p>
-      </div>
-
+        <p className="text-muted-foreground max-w-[800px]">
+          Learn more about who I am, my background, and what I do.
+        </p>
+      </section>
 
       {/* Contact Section */}
       <section className="py-8">
@@ -64,5 +68,3 @@ export default function About() {
     </div>
   )
 }
-
-

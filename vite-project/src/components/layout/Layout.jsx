@@ -1,22 +1,19 @@
 "use client"
 
 import React from "react"
-import { Outlet } from "react-router-dom"
-import { SiteSidebar } from "./site-sidebar" // Import the new sidebar
-import { SidebarInset } from "@/components/ui/sidebar"
 import Footer from "./Footer"
+import { ModeToggle } from "./mode-toggle"
 
 export default function Layout({ children }) {
   return (
-    <div className="flex min-h-screen">
-      <SiteSidebar /> {/* Use the new sidebar */}
-      <div className="flex-1 flex flex-col">
-      {/* Wrap the main content and footer */}
-        <main className="flex-1 p-4 md:p-6">
-          {children}
-        </main>
-        <Footer/>
-      </div>
+    <div className="min-h-screen flex flex-col">
+      <header className="py-4 px-6 flex justify-end">
+        <ModeToggle />
+      </header>
+      <main className="flex-1">
+        {children}
+      </main>
+      <Footer />
     </div>
   )
 }

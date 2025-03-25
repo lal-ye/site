@@ -1,22 +1,29 @@
 "use client"
 
 import React from "react"
-import { MoonIcon, SunIcon } from 'lucide-react'
+import { IconButton } from '@mui/material'
+import Brightness4Icon from '@mui/icons-material/Brightness4'
+import Brightness7Icon from '@mui/icons-material/Brightness7'
 import { useTheme } from "./ThemeProvider"
-import { Button } from "@/components/ui/button"
 
 export function ModeToggle() {
   const { theme, setTheme } = useTheme()
 
+  const toggleTheme = () => {
+    setTheme(theme === "light" ? "dark" : "light")
+  }
+
   return (
-    <Button
-      variant="outline"
-      size="icon"
-      onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+    <IconButton
+      onClick={toggleTheme}
+      color="inherit"
       aria-label="Toggle theme"
-      className="rounded-full w-9 h-9 transition-all hover:scale-110"
     >
-      {theme === "dark" ? <SunIcon className="h-4 w-4" /> : <MoonIcon className="h-4 w-4" />}
-    </Button>
+      {theme === "dark" ? (
+        <Brightness7Icon />
+      ) : (
+        <Brightness4Icon />
+      )}
+    </IconButton>
   )
 }

@@ -1,3 +1,4 @@
+// App.jsx
 import React from "react"
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 import { ThemeProvider } from "./components/layout/ThemeProvider"
@@ -8,15 +9,15 @@ import About from "./pages/About"
 
 function App() {
   return (
-    <ThemeProvider defaultTheme="system" storageKey="vite-ui-theme">
+    <ThemeProvider defaultTheme="light" storageKey="vite-ui-theme">
       <BrowserRouter>
-        <Routes>
-          <Route element={<Layout />}>
+        <Layout>
+          <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/projects" element={<Projects />} />
             <Route path="/about" element={<About />} />
-          </Route>
-        </Routes>
+          </Routes>
+        </Layout>
       </BrowserRouter>
     </ThemeProvider>
   )
