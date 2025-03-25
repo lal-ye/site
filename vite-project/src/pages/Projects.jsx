@@ -1,5 +1,8 @@
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
+// UI component imports
 import { Button } from "@/components/ui/button"
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
+
+// Icon imports
 import { GithubIcon, ExternalLinkIcon } from "lucide-react"
 
 export default function Projects() {
@@ -19,17 +22,20 @@ export default function Projects() {
 
   return (
     <div className="space-y-8 pb-16">
-      <div className="space-y-4">
+      {/* Projects Header Section */}
+      <section className="space-y-4">
         <h1 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">Projects</h1>
         <p className="text-muted-foreground max-w-[800px]">
           Browse through my portfolio of projects. Each project represents a unique challenge and solution. Click on the
           cards to learn more about each project.
         </p>
-      </div>
+      </section>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {/* Projects Grid */}
+      <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {projects.map((project) => (
           <Card key={project.id} className="overflow-hidden group">
+            {/* Project Image with Overlay */}
             <div className="relative">
               <img
                 src={project.image || "/placeholder.svg"}
@@ -49,6 +55,8 @@ export default function Projects() {
                 </a>
               </div>
             </div>
+            
+            {/* Project Details */}
             <CardHeader className="p-4">
               <CardTitle className="text-xl">{project.title}</CardTitle>
             </CardHeader>
@@ -64,9 +72,7 @@ export default function Projects() {
             </CardFooter>
           </Card>
         ))}
-      </div>
+      </section>
     </div>
   )
 }
-
-
